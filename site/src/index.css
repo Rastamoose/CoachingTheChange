@@ -1,0 +1,51 @@
+@import 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  #root {
+    width: 100%;
+  }
+}
+
+@layer components {
+  /* ── Buttons ── */
+  /* Rounded rectangle — used in page content sections */
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white font-medium px-8 py-3 rounded-md transition-all duration-200;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center border border-gray-200 hover:border-gray-400 text-gray-900 font-medium px-8 py-3 rounded-md transition-all duration-200;
+  }
+  /* Pill — used in Navbar, Hero CTAs, contact form */
+  .btn-primary-pill {
+    @apply inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white font-medium px-6 py-3 rounded-full transition-all duration-300;
+  }
+  .btn-outline-pill {
+    @apply inline-flex items-center justify-center border border-gray-800 text-gray-900 hover:bg-gray-900 hover:text-white font-medium px-6 py-3 rounded-full transition-all duration-300;
+  }
+  /* Ghost card — white background with shadow, no border */
+  .btn-ghost-card {
+    @apply inline-flex items-center justify-center bg-white text-gray-900 font-medium px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-200;
+  }
+
+  /* ── Form fields ── */
+  .input-field {
+    @apply w-full border border-gray-200 rounded-md px-4 py-3 text-base text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pastel-green focus:border-transparent transition-all bg-white;
+  }
+  .field-label {
+    @apply block text-base text-gray-700 text-center mb-2;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
