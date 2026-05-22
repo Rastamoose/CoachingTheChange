@@ -32,28 +32,11 @@ Runs on `http://localhost:5173` (or next available port).
 
 ## Fonts
 
-- **Playfair Display** — ALL headings and card/component titles (`font-playfair font-bold`). Never use `font-lora`.
-- **Lato** — ALL body text, descriptions, labels (default, no class needed).
+- **Playfair Display** — headings (`font-playfair`)
+- **Lora** — subheadings, card titles (`font-lora`)
+- **Lato** — body text, default (`font-lato`)
 
 Loaded via Google Fonts in `src/index.css`.
-
-## Typography scale — MANDATORY, do not deviate
-
-| Element | Classes |
-|---|---|
-| Page h1 | `font-playfair text-4xl md:text-5xl font-bold` |
-| Section h2 | `font-playfair text-3xl md:text-4xl font-bold` |
-| Card / panel title h3 | `font-playfair font-bold text-xl` |
-| Sub-section heading h4 | `font-playfair font-bold text-lg` |
-| Body / card description | `text-base leading-relaxed` (minimum — never `text-sm` for content) |
-| Secondary labels / metadata | `text-sm` (stat labels, attribution, badges only) |
-| Fine print / legal / captions | `text-xs` |
-| Form input text | `text-base` |
-
-**Rules enforced site-wide:**
-- All content-facing text is `text-base` minimum. `text-sm` is reserved for non-content UI (labels, badges, timestamps, footer links).
-- `font-lora` is BANNED — replace any occurrence with `font-playfair`.
-- Every heading uses `font-playfair font-bold`, no exceptions.
 
 ## Routes (public only)
 
@@ -72,17 +55,13 @@ Loaded via Google Fonts in `src/index.css`.
 
 Admin routes (`/admin/*`) are **not replicated** — they were abandoned Supabase scaffolding in the original.
 
-## Image hosting
+## Images
 
-All images are served directly from the live site CDN:
+All images are served locally from `public/images/`. Key files:
+- **Hero / Coach Halima photo**: `public/images/coach-halima.png`
+- **Logo carousel**: `public/images/logo-<name>.png` (20 logos) — see `src/data/logos.ts`
 
-```
-https://www.coachingthechange.com/lovable-uploads/<uuid>.png
-```
-
-Key images:
-- **Hero / Coach Halima photo**: `754fc39f-d73d-4cc8-8e64-d97e2e182065.png`
-- **Logo carousel**: See `LogoCarousel.tsx` for all 20 company logos
+`MEDIA_BASE` in `src/lib/config.ts` resolves to `/images`.
 
 ## Project structure
 
