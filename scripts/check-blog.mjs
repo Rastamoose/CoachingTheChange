@@ -68,9 +68,11 @@ async function checkLiveQuery() {
     for (const field of ['title', 'slug', 'excerpt']) {
       assert.ok(post[field], `post "${post.slug ?? post.title}" is missing ${field}`);
     }
+    // Underscores are legal in URLs (Sanity's slug field allows them), so this only
+    // rejects characters that actually break a link — spaces, slashes, punctuation.
     assert.match(
       post.slug,
-      /^[a-z0-9-]+$/,
+      /^[a-zA-Z0-9._~-]+$/,
       `slug "${post.slug}" has characters that will break the URL`,
     );
   }
