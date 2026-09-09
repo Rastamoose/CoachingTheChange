@@ -36,7 +36,7 @@ export default function Services() {
         </div>
 
         <div className="text-center mt-10">
-          <Link to="/services" className="inline-flex items-center justify-center bg-pastel-green hover:bg-pastel-green/80 text-gray-900 font-medium px-6 py-3 rounded-full transition-all duration-300 group">
+          <Link to="/services" className="inline-flex items-center justify-center bg-pastel-green hover:bg-pastel-green/80 text-gray-900 font-medium px-5 py-2.5 rounded-full transition-all duration-300 group">
             View All Programs
             <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>

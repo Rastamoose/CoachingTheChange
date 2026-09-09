@@ -18,25 +18,38 @@
   }
 }
 
+@layer base {
+  img {
+    transition: transform 0.3s ease;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+}
+
 @layer components {
   /* ── Buttons ── */
+  .pastel-button {
+    @apply inline-flex items-center justify-center font-medium px-5 py-2 rounded-full transition-all duration-300;
+  }
+
   /* Rounded rectangle — used in page content sections */
   .btn-primary {
-    @apply inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white font-medium px-8 py-3 rounded-md transition-all duration-200;
+    @apply inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white font-medium px-6 py-2.5 rounded-md transition-all duration-200;
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center border border-gray-200 hover:border-gray-400 text-gray-900 font-medium px-8 py-3 rounded-md transition-all duration-200;
+    @apply inline-flex items-center justify-center border border-gray-200 hover:border-gray-400 text-gray-900 font-medium px-6 py-2.5 rounded-md transition-all duration-200;
   }
-  /* Pill — used in Navbar, Hero CTAs, contact form */
+  /* Pill — used in Hero CTAs, contact form */
   .btn-primary-pill {
-    @apply inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white font-medium px-6 py-3 rounded-full transition-all duration-300;
+    @apply inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white font-medium px-5 py-2.5 rounded-full transition-all duration-300;
   }
   .btn-outline-pill {
-    @apply inline-flex items-center justify-center border border-gray-800 text-gray-900 hover:bg-gray-900 hover:text-white font-medium px-6 py-3 rounded-full transition-all duration-300;
+    @apply inline-flex items-center justify-center border border-gray-800 text-gray-900 hover:bg-gray-900 hover:text-white font-medium px-5 py-2.5 rounded-full transition-all duration-300;
   }
   /* Ghost card — white background with shadow, no border */
   .btn-ghost-card {
-    @apply inline-flex items-center justify-center bg-white text-gray-900 font-medium px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-200;
+    @apply inline-flex items-center justify-center bg-white text-gray-900 font-medium px-6 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all duration-200;
   }
 
   /* ── Form fields ── */

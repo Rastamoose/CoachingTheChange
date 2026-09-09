@@ -1,5 +1,4 @@
 import { Globe, ArrowRight } from 'lucide-react';
-import { MEDIA_BASE } from '../lib/config';
 import Container from './ui/Container';
 
 export default function Hero() {
@@ -35,13 +34,13 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <a href="#contact" className="inline-flex items-center justify-center bg-pastel-green hover:bg-pastel-green/80 text-gray-900 font-medium px-6 py-3 rounded-full transition-all duration-300 group">
+              <a href="#contact" className="inline-flex items-center justify-center bg-pastel-green hover:bg-pastel-green/80 text-gray-900 font-medium px-5 py-2.5 rounded-full transition-all duration-300 group">
                 Book Your Consultation
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
                 href="#about"
-                className="inline-flex items-center justify-center bg-transparent border border-pastel-green text-gray-800 hover:bg-pastel-green/10 font-medium px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center bg-transparent border border-pastel-green text-gray-800 hover:bg-pastel-green/10 font-medium px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105"
               >
                 Learn More
               </a>
@@ -52,9 +51,9 @@ export default function Hero() {
             <div className="relative max-w-[340px] mx-auto">
               <div className="rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
                 <img
-                  src={`${MEDIA_BASE}/coach-halima.png`}
+                  src="/Halima2a.png"
                   alt="Coach Halima"
-                  className="object-cover object-center w-full h-full transition-transform duration-700 hover:scale-105"
+                  className="object-cover object-center w-full h-full [transition-duration:700ms]"
                   loading="eager"
                   width={600}
                   height={800}
