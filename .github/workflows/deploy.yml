@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Sanity fires this on publish so blog posts get their share-preview tags baked.
+  # See docs/BLOG-SETUP.md for the webhook configuration.
+  repository_dispatch:
+    types: [sanity-publish]
 
 permissions:
   contents: read
@@ -30,6 +34,9 @@ jobs:
       - run: npm run build
       # ponytail: SPA fallback so /about etc. don't 404 on refresh
       - run: cp dist/index.html dist/404.html
+      # Bakes og:/twitter: tags into a real page per post, so shared links preview
+      # properly and post URLs return 200 instead of falling through to 404.html.
+      - run: node scripts/prerender-blog.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
