@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ponytail: hand-maintained. Add a route here when you add one to App.tsx; generate from the router only if this list starts drifting. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://coachingthechange.com/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://coachingthechange.com/about</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coachingthechange.com/services</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coachingthechange.com/pricing</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coachingthechange.com/testimonials</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://coachingthechange.com/faq</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <!-- ponytail: /blog only. Individual posts live in Sanity; add a generated
+       sitemap-blog.xml if post pages ever need to rank on their own. -->
+  <url>
+    <loc>https://coachingthechange.com/blog</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://coachingthechange.com/terms-of-service</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://coachingthechange.com/cookie-policy</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://coachingthechange.com/privacy-policy</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://coachingthechange.com/fulfillment</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>

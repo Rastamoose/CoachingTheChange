@@ -8,6 +8,7 @@ import PricingPage from './pages/Pricing';
 import ServicesPage from './pages/Services';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import Legal from './pages/Legal';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -30,6 +31,10 @@ export default function App() {
       <Route path="/pricing" element={<PricingPage />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
+      <Route path="/terms-of-service" element={<Legal title="Terms of Service" />} />
+      <Route path="/cookie-policy" element={<Legal title="Cookie Policy" />} />
+      <Route path="/privacy-policy" element={<Legal title="Privacy Policy" />} />
+      <Route path="/fulfillment" element={<Legal title="Fulfillment Policy" />} />
     </Routes>
     </>
   );
