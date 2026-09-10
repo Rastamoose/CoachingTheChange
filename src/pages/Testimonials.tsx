@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { STRIPE_BOOKING_URL } from '../lib/stripe';
 import { testimonials, CATEGORIES, type TestimonialCategory } from '../data/testimonials';
 import PageLayout from '../components/ui/PageLayout';
 import Container from '../components/ui/Container';
@@ -29,8 +28,8 @@ export default function TestimonialsPage() {
             partnership.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href={STRIPE_BOOKING_URL} className="btn-primary group">
-              Book a Consultation
+            <a href="/#contact" className="btn-primary group">
+              Book a Discovery Call
               <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
             <a href="/services" className="btn-outline">
@@ -83,8 +82,8 @@ export default function TestimonialsPage() {
             Join our clients in experiencing the profound impact of personalized coaching. We're
             here to support your journey toward achieving your goals and creating lasting change.
           </p>
-          <a href={STRIPE_BOOKING_URL} className="btn-primary group">
-            Book a Consultation
+          <a href="/#contact" className="btn-primary group">
+            Book a Discovery Call
             <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </Container>

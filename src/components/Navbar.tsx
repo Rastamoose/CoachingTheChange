@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { STRIPE_BOOKING_URL } from '../lib/stripe';
 import Container from './ui/Container';
 
 const navLinks = [
@@ -50,7 +49,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href={STRIPE_BOOKING_URL}
+              href="/#contact"
               className="bg-pastel-green hover:bg-pastel-green/90 text-gray-800 font-medium px-5 py-2 rounded-full text-sm transition-all duration-200 hover:shadow-md"
             >
               Book a Call
@@ -79,7 +78,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href={STRIPE_BOOKING_URL}
+            href="/#contact"
             className="block text-center bg-pastel-green hover:bg-pastel-green/90 text-gray-800 font-medium px-5 py-2.5 rounded-full text-sm transition-all duration-200"
           >
             Book a Call

@@ -1,5 +1,4 @@
 import { Mail } from 'lucide-react';
-import { STRIPE_BOOKING_URL } from '../lib/stripe';
 import { individualPlans, corporatePlans } from '../data/pricing';
 import PageLayout from '../components/ui/PageLayout';
 import Container from '../components/ui/Container';
@@ -23,8 +22,8 @@ function IndividualPlanCard({ title, price, currency, features }: {
       <ul className="space-y-4 flex-1 mb-8">
         {features.map((f) => <CheckListItem key={f} text={f} align="center" />)}
       </ul>
-      <a href={STRIPE_BOOKING_URL} className="btn-primary w-full justify-center">
-        Book Now
+      <a href="/#contact" className="btn-primary w-full justify-center">
+        Book a Discovery Call
       </a>
     </div>
   );
@@ -77,8 +76,8 @@ export default function PricingPage() {
             Begin your coaching journey with a 1-hour initial consultation to explore how our
             programs can help you achieve your goals.
           </p>
-          <a href={STRIPE_BOOKING_URL} className="btn-primary">
-            Book Your Call
+          <a href="/#contact" className="btn-primary">
+            Book a Discovery Call
           </a>
         </Container>
       </section>
@@ -99,8 +98,8 @@ export default function PricingPage() {
             individual sessions. If you decide to join the full program, the cost of your initial
             session will be credited toward the total program fee.
           </p>
-          <a href={STRIPE_BOOKING_URL} className="btn-primary">
-            Book Now
+          <a href="/#contact" className="btn-primary">
+            Book a Discovery Call
           </a>
         </Container>
       </section>
@@ -163,7 +162,7 @@ export default function PricingPage() {
           </p>
           <a href="/#contact" className="btn-primary gap-2">
             <Mail className="w-4 h-4" />
-            Contact Us
+            Book a Discovery Call
           </a>
         </Container>
       </section>

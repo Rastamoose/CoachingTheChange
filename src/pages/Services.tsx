@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { CircleCheck, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { STRIPE_BOOKING_URL } from '../lib/stripe';
 import { serviceDetails, type ServiceDetail, type Story, type Benefit } from '../data/serviceDetails';
 import SplitBenefitsSection from '../components/ui/SplitBenefitsSection';
 import PageLayout from '../components/ui/PageLayout';
@@ -69,10 +68,10 @@ function CtaBanner({ title }: { title: string }) {
         <p className="text-gray-500 text-base">Take the first step toward transformation with a personalized consultation.</p>
       </div>
       <a
-        href={STRIPE_BOOKING_URL}
+        href="/#contact"
         className="flex-shrink-0 inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors duration-200"
       >
-        Book a Call
+        Book a Discovery Call
         <ArrowRight className="w-4 h-4" />
       </a>
     </div>

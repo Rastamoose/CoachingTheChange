@@ -77,7 +77,7 @@ export default function FAQ() {
           <div className="mt-14 flex justify-center">
             <a href="/#contact" className="btn-primary inline-flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              Contact Us
+              Book a Discovery Call
             </a>
           </div>
         </Container>

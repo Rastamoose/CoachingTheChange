@@ -50,7 +50,9 @@ export default function ContactForm() {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(form),
+        // _subject sets the subject line Formspree uses for the notification email.
+        // Without it these all arrive as a generic "New submission from ...".
+        body: JSON.stringify({ ...form, _subject: `Discovery call request — ${form.name}` }),
       });
       setStatus(res.ok ? 'success' : 'error');
       if (res.ok) setForm(EMPTY_FORM);
@@ -66,7 +68,10 @@ export default function ContactForm() {
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-3">
             Ready to Transform Your Life?
           </h2>
-          <p className="text-gray-600 text-base">Send a message to start your coaching journey.</p>
+          <p className="font-lora text-xl text-gray-800 mb-2">Book a Free Discovery Call</p>
+          <p className="text-gray-600 text-base">
+            Tell us a little about yourself and we'll arrange a discovery call, free of charge.
+          </p>
         </div>
 
         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 md:p-10">
@@ -193,7 +198,7 @@ export default function ContactForm() {
                   disabled={status === 'sending'}
                   className="btn-primary-pill group disabled:opacity-60"
                 >
-                  {status === 'sending' ? 'Sending...' : 'Send Message'}
+                  {status === 'sending' ? 'Sending...' : 'Book Your Discovery Call'}
                   {status !== 'sending' && (
                     <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   )}
