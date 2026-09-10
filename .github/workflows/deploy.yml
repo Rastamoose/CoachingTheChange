@@ -34,6 +34,14 @@ jobs:
       - run: npm run build
       # ponytail: SPA fallback so /about etc. don't 404 on refresh
       - run: cp dist/index.html dist/404.html
+      # 404.html renders fine but still returns HTTP 404, which Google won't
+      # index. A real index.html per route makes Pages answer 200.
+      # ponytail: keep in sync with public/sitemap.xml and App.tsx routes.
+      - run: |
+          for p in about services pricing testimonials faq \
+                   terms-of-service cookie-policy privacy-policy fulfillment; do
+            mkdir -p "dist/$p" && cp dist/index.html "dist/$p/index.html"
+          done
       # Bakes og:/twitter: tags into a real page per post, so shared links preview
       # properly and post URLs return 200 instead of falling through to 404.html.
       - run: node scripts/prerender-blog.mjs
